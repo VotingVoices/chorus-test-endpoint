@@ -2,8 +2,9 @@ import express = require("express");
 
 const router = express.Router();
 
-router.get('/', (req: express.Request, res: express.Response) => {
-	res.send("Hello world!");
+router.post('/', (req: express.Request, res: express.Response) => {
+	console.log(`${req.method}: ${req.body}`);
+	res.status(200).json({ result: 'success' });
 });
 
 const app = express();
