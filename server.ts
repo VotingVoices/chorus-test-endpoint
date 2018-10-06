@@ -5,7 +5,6 @@ import cors = require('cors');
 const router = express.Router();
 
 router.post('/', (req: express.Request, res: express.Response) => {
-	console.log(`${req.method}: ${req.body}`);
 	console.log(req.body);
 	res.status(200).json({ result: 'success' });
 });
