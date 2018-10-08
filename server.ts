@@ -12,7 +12,9 @@ router.post('/', (req: express.Request, res: express.Response) => {
 const app = express();
 const port = 3001;
 
-app.options('*', cors());
+const corsOptions = { origin: true } as cors.CorsOptions;
+
+app.options('*', cors(corsOptions));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
