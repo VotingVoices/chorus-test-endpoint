@@ -14,7 +14,7 @@ const port = 3001;
 
 const corsOptions = { origin: true } as cors.CorsOptions;
 
-app.options('*', cors(corsOptions));
+app.use(cors(corsOptions));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
